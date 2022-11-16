@@ -165,7 +165,7 @@
       },
       {
         "title": "Star Trek Streams",
-        "description": "React-based app for locating which straming app has the various Star Trek shows and movies. I build this befor everything was on Paramount+",
+        "description": "React-based app for locating which straming app has the various Star Trek shows and movies. I build this before everything was on Paramount+",
         "skillsUsed": ["JavaScript", "React"],
         "githubLink": "https://github.com/nateonmission/Star-Trek-Streams",
         "thumbnail": ""
