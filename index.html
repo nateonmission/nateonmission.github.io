@@ -1,1 +1,104 @@
-<!DOCTYPE html><html><head><title>NateOnMission</title><meta charset=utf-8><meta name=description content=MyPortfolio><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><link rel=icon type=image/png sizes=128x128 href=icons/favicon-128x128.png><link rel=icon type=image/png sizes=96x96 href=icons/favicon-96x96.png><link rel=icon type=image/png sizes=32x32 href=icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=icons/favicon-16x16.png><script defer src=js/vendor.26a1501d.js></script><script defer src=js/app.adfb2f65.js></script><link href=css/vendor.87f1ed25.css rel=stylesheet><link href=css/app.bc191a7b.css rel=stylesheet></head><body><div id=q-app></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nathan Allen // DOS Portfolio Terminal</title>
+  <meta name="description" content="Nathan Allen — Back-End Python Developer. Retro DOS terminal portfolio." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="crt">
+    <main class="screen flicker" role="application" aria-label="DOS Portfolio Terminal">
+      <header class="topbar">
+        <div class="brand">
+          <div class="title">NATHAN ALLEN // DOS PORTFOLIO TERMINAL</div>
+          <div class="sub">
+            Use <b>↑</b>/<b>↓</b> to navigate • <b>Enter</b> to open • type <b>help</b> below
+          </div>
+        </div>
+
+        <div class="status">
+          <div class="pill">MODE: <strong>VGA</strong></div>
+          <div class="pill">SOUND: <strong id="soundStatus">ON</strong></div>
+          <button class="btn" id="toggleSound" type="button">Toggle Sound</button>
+        </div>
+      </header>
+
+      <section class="grid">
+        <!-- LEFT -->
+        <section class="panel" aria-label="Boot Log and Menu">
+          <h2>BOOT SEQUENCE</h2>
+          <div id="boot" class="boot" aria-live="polite"></div>
+
+          <h2 class="mt12">MAIN MENU</h2>
+          <div id="menu" class="menu" aria-label="Menu"></div>
+
+          <div class="quickKeys">
+            <span class="tag"><b>Quick:</b> type <code>open github</code> • <code>open linkedin</code> • <code>email</code></span>
+          </div>
+        </section>
+
+        <!-- RIGHT -->
+        <section class="panel" aria-label="Details">
+          <div class="hero">
+            <div class="avatarFrame" aria-label="Portrait frame">
+              <!-- Replace src with your hosted headshot path (or remove the img). -->
+              <img id="headshot" src="assets/headshot.jpg" alt="Nathan Allen portrait" />
+              <div class="avatarScan"></div>
+            </div>
+
+            <div class="heroText">
+              <div class="heroTitle" id="heroTitle">—</div>
+              <div class="heroSub" id="heroSub">—</div>
+
+              <div class="pillRow">
+                <div class="pill">LOCATION: <strong id="loc">Mobile, Alabama</strong></div>
+                <div class="pill">STACK: <strong id="stack">Python • SQL • AWS</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="now">
+            <div class="nowHeader">
+              <h3 class="bigTitle" id="sectionTitle">—</h3>
+              <div class="pill" id="sectionBadge">TAB: —</div>
+            </div>
+
+            <div class="meter" aria-label="Signal meter"><span id="signalBar"></span></div>
+
+            <div class="content" id="content" aria-live="polite"></div>
+
+            <div class="prompt" aria-label="Command prompt">
+              <h2>COMMAND PROMPT</h2>
+              <div class="cmdLog" id="cmdLog"></div>
+
+              <div class="cmdLine">
+                <div class="caret">C:\NATE&gt;</div>
+                <input id="cmdInput" type="text" spellcheck="false" autocomplete="off"
+                       placeholder="help, dir, open github, open linkedin, email, cls, theme amber" />
+              </div>
+
+              <div class="hint">
+                Try: <code>help</code> • <code>dir</code> • <code>open github</code> • <code>theme green</code> • <code>glitch</code>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <div class="marquee">
+          <span id="marqueeText">LOADING…</span>
+        </div>
+        <div class="smallBtns">
+          <button class="btn" id="glitchBtn" type="button">Glitch</button>
+          <button class="btn" id="resetBtn" type="button">Reset</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
