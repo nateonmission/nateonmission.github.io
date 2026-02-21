@@ -94,7 +94,7 @@ const SECTIONS = [
         <li><b>AWS Observability Pack</b> — CloudWatch alarms/dashboards, incident notes, runbooks.</li>
       </ul>
       <div style="margin-top:10px">
-        <b>Tip:</b> If you paste 3–5 repo links, I’ll rewrite this section with stronger outcomes + tech bullets.
+        <b>TODO:</b> Paste 3–5 repo links, rewrite this section with stronger outcomes + tech bullets.
       </div>
     `
   },
